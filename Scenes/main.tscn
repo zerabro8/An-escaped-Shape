@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dkptngq6oxlmf" path="res://Assets/Map/16px/tilesStuff.png" id="2_8gbba"]
 [ext_resource type="PackedScene" uid="uid://dkjkcmj6gtuwq" path="res://Scenes/player.tscn" id="3_8gbba"]
 [ext_resource type="Texture2D" uid="uid://bnkacbxxarwsh" path="res://Assets/Map/16px/tilesWalls.png" id="3_jjvhh"]
+[ext_resource type="PackedScene" uid="uid://bdn1su4odyavb" path="res://Scenes/scientist.tscn" id="5_kry3j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jjvhh"]
 texture = ExtResource("1_bo1nx")
@@ -149,6 +150,12 @@ texture = ExtResource("1_bo1nx")
 8:17/0 = 0
 9:17/0 = 0
 10:17/0 = 0
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_kry3j"]
+vertices = PackedVector2Array(8, 8, -8, 8, -8, -8, 8, -8)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)])
+agent_radius = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kry3j"]
 texture = ExtResource("2_8gbba")
@@ -309,6 +316,7 @@ texture = ExtResource("2_8gbba")
 26:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -4.78784, -8, -4.78784, 8, -8, 8)
 27:6/0 = 0
 28:6/0 = 0
+28:6/0/navigation_layer_0/polygon = SubResource("NavigationPolygon_kry3j")
 29:6/0 = 0
 30:6/0 = 0
 31:6/0 = 0
@@ -797,6 +805,7 @@ texture = ExtResource("3_jjvhh")
 
 [sub_resource type="TileSet" id="TileSet_4kxuq"]
 physics_layer_0/collision_layer = 1
+navigation_layer_0/layers = 1
 sources/0 = SubResource("TileSetAtlasSource_jjvhh")
 sources/1 = SubResource("TileSetAtlasSource_kry3j")
 sources/2 = SubResource("TileSetAtlasSource_21xkr")
@@ -1275,3 +1284,7 @@ tile_map_data = PackedByteArray("AAAGABMAAAAUAAcAAAAGABQAAAAUAAgAAAAGABUAAAAUAAk
 tile_set = SubResource("TileSet_mti6b")
 
 [node name="Player" parent="." unique_id=153191561 instance=ExtResource("3_8gbba")]
+
+[node name="Scientist" parent="." unique_id=862863492 instance=ExtResource("5_kry3j")]
+z_index = 3
+position = Vector2(-213.00009, 143)
