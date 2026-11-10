@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dkjkcmj6gtuwq" path="res://Scenes/player.tscn" id="3_8gbba"]
 [ext_resource type="Texture2D" uid="uid://bnkacbxxarwsh" path="res://Assets/Map/16px/tilesWalls.png" id="3_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://bdn1su4odyavb" path="res://Scenes/scientist.tscn" id="5_kry3j"]
+[ext_resource type="PackedScene" uid="uid://b0maygmeey8wr" path="res://Scenes/guard.tscn" id="6_21xkr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jjvhh"]
 texture = ExtResource("1_bo1nx")
@@ -1288,3 +1289,7 @@ tile_set = SubResource("TileSet_mti6b")
 [node name="Scientist" parent="." unique_id=862863492 instance=ExtResource("5_kry3j")]
 z_index = 3
 position = Vector2(-213.00009, 143)
+
+[node name="Guard" parent="." unique_id=1927910751 instance=ExtResource("6_21xkr")]
+z_index = 3
+position = Vector2(-289, -53.999992)

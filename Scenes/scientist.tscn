@@ -158,6 +158,7 @@ animation = &"Scientist_walk_back"
 frame_progress = 0.29823524
 
 [node name="Scientist_collision" type="CollisionShape2D" parent="." unique_id=57761626]
+z_index = 2
 shape = SubResource("CircleShape2D_mti6b")
 debug_color = Color(0.8392157, 0, 0, 0.41960785)
 

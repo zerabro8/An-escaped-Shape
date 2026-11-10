@@ -85,16 +85,16 @@ func _physics_process(delta):
 	# You can even use it with an array since it's like an index
 	match _cardinal_direction:
 		0:
-			print("West")
+			
 			Scientist_animation.play("Scientist_walk_left")
 		1:
-			print("North")
+			
 			Scientist_animation.play("Scientist_walk_forward")
 		2:
-			print("East")
+			
 			Scientist_animation.play("Scientist_walk_right")
 		3:
-			print("South")
+			
 			Scientist_animation.play("Scientist_walk_back")
 
 	# Remember our current position for next frame
